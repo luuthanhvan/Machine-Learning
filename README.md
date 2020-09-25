@@ -1,4 +1,4 @@
-# Machine Learning cource
+# Machine Learning course
 
 # Programing language: Python
 
