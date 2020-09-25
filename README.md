@@ -1,6 +1,6 @@
 # Machine Learning cource
 
-# Programing languale: Python
+# Programing language: Python
 
 # Installation:
 - Python 3
