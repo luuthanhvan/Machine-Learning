@@ -80,9 +80,11 @@ While implementing the decision tree we will go through the following two phases
 '''
 
 def main():
-    '''
+    
     # 1. Building phrase
+    '''
     data = loadData()
+    print(data)
     X, Y, X_train, X_test, y_train, y_test = splitDataset(data) # Split the dataset from train and test using Python sklearn package.
     clf_gini = train_using_gini(X_train, y_train) # Train the classifier using Gini index
     clf_entropy = train_using_entropy(X_train, y_train) # Train the classifier using Entropy
@@ -98,7 +100,8 @@ def main():
     # prediction using Entropy
     y_pred_entropy = prediction(X_test, clf_entropy)
     # Calculate the accuracy
-    cal_accuracy(y_test, y_pred_entropy) '''
+    cal_accuracy(y_test, y_pred_entropy)
+    '''
 
     # 1. Building phrase
     data = importData()
