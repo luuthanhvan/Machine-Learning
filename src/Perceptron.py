@@ -21,21 +21,18 @@ def showData(X, Y):
     plt.show()
 
 def myPerceptron(X, y, eta, loop):
-    n = len(X[0])
-    m = len(X[:,0])
+    n = len(X[0]) # number of columns (attributes)
+    m = len(X[:,0]) # number of rows (instances)
     # print("m =", m, "n =", n)
     w0 = -0.2
-    # w1 = 0.5
-    # w2 = 0.5
     w = (0.5, 0.5)
     # print("w0 =", w0)
-    # print("w1 =", w1)
-    # print("w2 =", w2)
+    # print("w =", w)
     for t in range(0, loop):
         print("Loop", t+1)
         for i in range(0, m):
             gx = w0 + sum(X[i,]*w)
-            print("gx =", gx)
+            # print("gx =", gx)
 
             if(gx > 0):
                 output = 1
@@ -44,8 +41,8 @@ def myPerceptron(X, y, eta, loop):
             
             w0 = w0 + eta * (y[i] - output)
             w = w + eta * (y[i] - output)*X[i,]
-            print(" w0 =", w0)
-            print(" w =", w)
+            # print(" w0 =", w0)
+            # print(" w =", w)
     return (np.round(w0, 3), np.round(w, 3))
 
 def main():
